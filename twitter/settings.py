@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&(on+$%pf^#4!5f_tv!h0+qfgf%&vs(jd7+glc%5eng3x#lbkc'
+SECRET_KEY = 'i_8$e&=cfr5bd1r(@^@gd@2y@+0@i0%ldpeke108o+pux&hsn4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.86.137', 'localhost']
 
 
 # Application definition
@@ -75,11 +75,14 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'twitter',
+        'HOST': '192.168.86.137',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '123456',    # 这里是自己下载mysql时候输入两次的那个密码
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
