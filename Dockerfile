@@ -8,8 +8,8 @@ RUN mkdir /code
 
 WORKDIR /code
 
-COPY requirements-prd.txt /code/
+COPY requirements.txt /code/
 
-RUN pip install -i https://mirrors.aliyun.com/pypi/simple -r requirements-prd.txt
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple -r requirements.txt
 
 COPY . /code/
