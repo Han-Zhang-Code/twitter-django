@@ -16,7 +16,7 @@ SECRET_KEY = 'i_8$e&=cfr5bd1r(@^@gd@2y@+0@i0%ldpeke108o+pux&hsn4'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '192.168.86.137', 'localhost']
-INTERNAL_IPS= ['127.0.0.1', '192.168.86.137', 'localhost']
+INTERNAL_IPS= ['172.20.0.1']
 
 
 # Application definition
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'debug_toolbar',
+    'tweets',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
